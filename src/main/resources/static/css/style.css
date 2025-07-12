@@ -1,0 +1,300 @@
+/* 🔧 Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  padding: 30px;
+}
+/* 🔲 Header Section */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  font-size: 1.8rem;
+}
+#search-bar input {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: none;
+}
+#search-bar button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* 🟢 Add Employee Button */
+#add-employee-btn,
+.btn-add {
+  padding: 10px 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+#add-employee-btn:hover,
+.btn-add:hover {
+  background-color: #218838;
+}
+
+/* 🧾 Sort + Show Controls */
+#controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+#controls select {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* 🧍 Employee Card Button Colors */
+.employee-card button {
+  padding: 6px 12px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.employee-card .edit-btn {
+  background-color: #ccc;
+  color: #333;
+}
+.employee-card .delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* 📦 Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* 🔍 Search & Filters */
+#search-bar,
+#filters {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#search-bar input,
+#filters select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 200px;
+}
+#add-employee-btn {
+  float: right;
+  margin: 10px;
+}
+/* 📋 Employee Cards */
+#employee-list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.employee-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+.employee-card:hover {
+  transform: translateY(-4px);
+}
+.employee-card h3 {
+  margin-bottom: 8px;
+}
+.employee-card p {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: #555;
+}
+.employee-card button {
+  padding: 6px 12px;
+  margin-right: 8px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.employee-card .delete-btn {
+  background-color: #dc3545;
+}
+.employee-card button:hover {
+  opacity: 0.9;
+}
+
+
+/* Form Styling Match */
+#employee-form-container {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 500px;
+  margin: 40px auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+#employee-form h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+input,
+select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+/* Buttons */
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+
+/* 🔁 Responsive Tweaks */
+@media (max-width: 600px) {
+  #search-bar,
+  #filters {
+    flex-direction: column;
+    gap: 10px;
+  }
+  #employee-form-container {
+    padding: 20px;
+  }
+}
+.error {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: block;
+}
+#filter-sidebar {
+  position: fixed;
+  top: 80px;
+  right: 0;
+  width: 300px;
+  background: #fff;
+  padding: 20px;
+  border-left: 2px solid #ccc;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+#filter-sidebar h3 {
+  margin-bottom: 15px;
+}
+#filter-sidebar label {
+  display: block;
+  margin-bottom: 12px;
+}
+#filter-sidebar input,
+#filter-sidebar select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+#filter-toggle-btn {
+  margin-bottom: 20px;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+}
+#pagination-controls button {
+  margin: 4px;
+  padding: 6px 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: default;
+}
+.filter-sidebar__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+button:hover { background: #007bff; color: white; }
