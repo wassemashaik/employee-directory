@@ -104,5 +104,11 @@ employee-directory/
 
 ---
 
+### ⚠️ Freemarker Note
+
+This project simulates Freemarker behavior using static mock data in JavaScript (`data.js`). Since no backend server is required or mentioned for setup, Freemarker was not implemented with a Java backend. Instead, the logic and rendering flow have been handled using vanilla JS to simulate dynamic template rendering.
+
+---
+
 **Wassema Shaik**  
 [LinkedIn](https://www.linkedin.com/in/wassemashaik/) | [GitHub](https://github.com/wassemashaik/employee-directory)
